@@ -1,7 +1,7 @@
 require 'pry'
 require 'yaml'
 def error
-error_message = 'Sorry, that emoticon was not found'
+'Sorry, that emoticon was not found'
 end
 
 def load_library(file_path)
@@ -16,7 +16,7 @@ end
 
 def get_japanese_emoticon(file_path = './lib/emoticons.yml', english_emoticon)
   lib = load_library(file_path)
-  lib["get_emoticon"].include?(english_emoticon) ? lib["get_emoticon"][english_emoticon] : error_message
+  lib["get_emoticon"].include?(english_emoticon) ? lib["get_emoticon"][english_emoticon] : error
 end
 
 def get_english_meaning(file_path = './lib/emoticons.yml', japanese_emoticon)
