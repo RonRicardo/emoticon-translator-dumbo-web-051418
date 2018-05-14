@@ -1,6 +1,8 @@
 require 'pry'
 require 'yaml'
+def error
 error_message = 'Sorry, that emoticon was not found'
+end
 
 def load_library(file_path)
   lib = YAML.load_file(file_path)
