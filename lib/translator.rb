@@ -1,5 +1,6 @@
 require 'pry'
 require 'yaml'
+
 def error
 'Sorry, that emoticon was not found'
 end
