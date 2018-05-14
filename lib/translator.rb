@@ -1,16 +1,14 @@
 require 'pry'
 require 'yaml'
 
-Error_message = "Sorry, that emoticon was not found"
-
 def load_library(file_path)
- lib = YAML.load_file(file_path)
- emoticon_lib = {"get_meaning" => {}, "get_emoticion" => {} }
- lib.each do |meaning, emoticons|
-   emoticon_lib["get_meaning"] = meaning
-   emoticon_lib["get_emoticion"] = emoticion
- end
- emoticon_lib
+  lib = YAML.load_file(file_path)
+  emote_lib = {"get_meaning" => {}, "get_emoticon" => {}}
+  lib.each do |meaning, emotes|
+    emote_lib["get_meaning"][emotes[1]] = meaning
+    emote_lib["get_emoticon"][emotes[0]] = emoticons[1]
+  end
+  emote_lib
 end
 
 def get_japanese_emoticon
