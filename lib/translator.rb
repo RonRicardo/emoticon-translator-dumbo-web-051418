@@ -11,8 +11,9 @@ def load_library(file_path)
   org_lib
 end
 
-def get_japanese_emoticon
-  # code goes here
+def get_japanese_emoticon(file_path = './lib/emoticons.yml', english_emoticon)
+  lib = load_library(file_path)
+  lib["get_emoticon"].include?(english_emoticon) ? lib["get_emoticon"][english_emoticon] : "Sorry, that emoticon was not found"
 end
 
 def get_english_meaning
